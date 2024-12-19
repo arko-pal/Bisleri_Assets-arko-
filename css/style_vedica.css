@@ -991,7 +991,7 @@ footer {
         transition: all .5s ease-out;
     }
     & div:last-child>div>div {
-        background-color: red;
+        /* background-color: red; */
         display: flex;
         box-shadow: none;
         padding: 0px;
