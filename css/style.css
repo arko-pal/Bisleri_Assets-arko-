@@ -1,0 +1,2990 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Work Sans";
+}
+
+body{
+    margin-bottom: 20px;
+    padding-top: 114px;
+    font-size: 1em;
+}
+
+#loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+#loader img {
+    width: 100px;
+    height: auto;
+}
+
+.app-ad{
+    display: none;
+}
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 10;
+    padding: 10px 0 0 0;
+    box-sizing: border-box;
+    box-shadow: 0 0 3px 1px rgba(0, 0, 0, 0.2);
+    background-color: white;
+}
+
+.header-top{
+    height: 37px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.header-loc{
+    margin-left: 151px;
+    display: flex;
+    cursor: pointer;
+}
+
+.header-loc div{
+    width: 183px;
+    font-size: 0.75em;
+    font-weight: 400;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    border: 1px solid #bbb;
+    border-radius: 10px 0 0 10px;
+    background-position: 150px center;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.header-loc .down{
+    background-image: url("asset/down.svg");
+}
+
+.header-loc .up{
+    background-image: url("asset/up.svg");
+}
+
+.header-loc button{
+    width: 77px;
+    color: #d0d0d0;
+    font-weight: 700;
+    text-align: center;
+    box-sizing: border-box;
+    font-size: 0.75em;
+    padding: 10px 30px;
+    font-family: "Work Sans";
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #00645b;
+    border-radius: 0 23px 23px 0;
+    background-color: #00645b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.header-loc button:hover{
+    color: #333333;
+    background-color: white;
+}
+
+.header-top .drop-down{
+    display: none;
+    position: absolute;
+    top: 48px;
+    left: 150px;
+    list-style: none;
+    width: 183px;
+    height: 200px;
+    padding: 0 15px;
+    font-weight: 500;
+    color: #333333;
+    box-sizing: border-box;
+    overflow-y: scroll;
+    background-color: white;
+    box-shadow: 0 4px 13px 3px rgba(0, 0, 0, .1);
+    transition: .2s ease;
+}
+
+.header-top .drop-down li{
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.header-info{
+    width: 325px;
+    display: flex;
+}
+
+.header-info a{
+    color: #333333;
+    text-decoration: none;
+    font-size: 14px;
+    display: flex;
+    margin: 0 20px 0 0;
+}
+
+.header-info .phone{
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    background-image: url("asset/phone.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-info .email{
+    width: 17px;
+    height: 17px;
+    margin-right: 10px;
+    background-image: url("asset/email.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.header-bottom{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0 0 20px;
+    box-sizing: border-box;
+}
+
+.header-left{
+    display: flex;
+    flex-direction: row;
+}
+
+.logo{
+    margin-top: -10px;
+}
+
+nav{
+    margin: 0 20px;
+}
+
+nav > ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+
+nav > ul > li{
+    display: flex;
+    align-items: start;
+}
+
+nav .expend{
+    padding-right: 14px;
+    background-image: url("asset/down.svg");
+    background-position: right 11px;
+    background-repeat: no-repeat;
+    background-size: 20px 20px;
+}
+
+.greener-promise:hover .greener-drop-down{
+    display: flex;
+}
+
+.greener-drop-down{
+    width: 100%;
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    padding: 50px;
+    border-top: 5px solid #078d73;
+    background-color: white;
+}
+
+.greener-drop-down > a{
+    margin-left: 50px;
+    margin-right: 100px;
+    font-size: 1.975em;
+    font-weight: 900;
+    font-family: "Source Serif 4", serif;
+    font-style: italic;
+    color: #078d73;
+}
+
+.greener-drop-down ul{
+    list-style: none;
+    display: flex;
+    padding: 20px 25px;
+    box-sizing: border-box;
+}
+
+.greener-drop-down ul li a{
+    font-weight: 700;
+}
+
+.brands:hover .brand-dropdown{
+    display: flex;
+}
+
+.brand-dropdown{
+    width: 50vw;
+    position: absolute;
+    top: 100%;
+    display: none;
+    background: #fff;
+    padding: 15px 20px;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, .1);
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.brand-dropdown section{
+    margin-right: 50px;
+}
+
+.brand-dropdown h3{
+    margin-bottom: 10px;
+}
+
+.brand-dropdown .h3-1{
+    color: #078d73;
+}
+
+.brand-dropdown .h3-2{
+    color: #0a5f8d;
+}
+
+.brand-dropdown .h3-3{
+    color: #041377;
+}
+
+.brand-dropdown section ul{
+    list-style: disc;
+    margin-left: 20px;
+}
+
+.brand-dropdown section li{
+    padding: 10px 0;
+}
+
+.brand-dropdown section a{
+    padding: 0;
+}
+
+.news-room:hover .news-room-drop-down{
+    display: flex;
+}
+
+.news-room-drop-down{
+    top: 100%;
+    display: none;
+    flex-direction: column;
+    position: absolute;
+}
+
+.news-room span{
+    width: 20px;
+    height: 20px;
+    margin-left: 60px;
+    margin-bottom: -10px;
+    border-radius: 2px;
+    transform: rotate(45deg);
+    background-color: white;
+}
+
+.news-room-drop-down ul{
+    list-style: none;
+    padding: 15px 15px 5px 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.news-room-drop-down li{
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.news-room-drop-down li a{
+    padding: 0;
+    color: #333333;
+    font-weight: 600;
+}
+
+nav .active{
+    border-bottom: 3px solid #00645b;
+}
+
+nav li a{
+    font-size: 1em;
+    font-weight: 450;
+    text-decoration: none;
+    color: #333333;
+    border-bottom: 3px solid white;
+    padding: 10px 14px 15px 25px;
+}
+
+.header-right{
+    display: flex;
+    margin-right: 10px;
+}
+
+.header-right > button{
+    width: 32px;
+    height: 32px;
+    margin-right: 18px;
+    border-radius: 50%;
+    border: none;
+    background-color: #00b2a2;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+
+.header-right .search{
+    background-image: url("asset/search.svg");
+}
+
+.search-bar-panel{
+    width: 100%;
+    padding: 30px;
+    display: none;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 6;
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.search-bar-panel .close-panel{
+    position: absolute;
+    top: 40px;
+    right: 40px;
+    font-size: 15px;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    color: #333333;
+    padding: 2px 0 2px 35px;
+    background-color: white;
+    background-image: url("asset/close.svg");
+    background-position: 0px center;
+    background-repeat: no-repeat;
+    background-size: 24px 24px;
+}
+
+.search-bar-panel h2{
+    width: 100%;
+    margin-top: -10px;
+    text-align: center;
+    color: #333333;
+    font-size: 2.825em;
+    font-weight: 900;
+    font-style: italic;
+    font-family: "Source Serif 4", serif;
+}
+
+.search-bar{
+    display: flex;
+    justify-content: center;
+}
+
+.search-bar-panel .search-wraper{
+    width: 500px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 45px;
+}
+
+.search-wraper input{
+    border: 1px solid #bbb;
+    border-radius: 5px 0 0 5px;
+    width: 100%;
+    outline: none;
+    padding: 15px;
+    font-size: 1em;
+    font-family: "Work Sans";
+    box-sizing: border-box;
+    background-color: white;
+}
+
+.search-wraper button{
+    width: 100px !important;
+    height: 100% !important;
+    color: #d0d0d0;
+    margin: 0px !important;
+    margin-left: -8px !important;
+    border-radius: 8px;
+    padding: 15px 25px;
+    font: 500 1em "Work Sans";
+    outline: none;
+    border: none;
+    cursor: pointer;
+    border: 1px solid #00645b;
+    background-color: #00645b;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.search-wraper button:hover{
+    color: #333333;
+    background-color: white;
+}
+
+.top-brands{
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.top-brands p{
+    color: #333333;
+    text-align: center;
+    font: 500 1.125em "Work Sans";
+    margin: 20px 0;
+}
+
+.top-brands div{
+    display: flex;
+}
+
+.top-brands label{
+    margin: 0 5px;
+    display: inline-block;
+    background-color: #fff;
+    padding: 10px 20px;
+    font: 700 .875em "Work Sans";
+    border: 1px solid #e4e4e4;
+    border-radius: 23px;
+    color: #333;
+}
+
+.header-right .login{
+    background-image: url("asset/user.svg");
+    background-size: 21px 21px;
+}
+
+.header-right .login:hover + .login-drop-down, .login-drop-down:hover{
+    display: block;
+}
+
+.login-drop-down{
+    width: 150px;
+    top: 100%;
+    display: none;
+    margin-top: -15px;
+    margin-left: -100px;
+    flex-direction: column;
+    position: absolute;
+    list-style: none;
+    padding: 15px 15px 5px 15px;
+    border-radius: 10px;
+    background-color: white;
+}
+
+.login-drop-down li{
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: padding-left .25s ease-out;
+}
+
+.login-drop-down li:hover{
+    padding-left: 10px;
+}
+
+.login-drop-down li a{
+    padding: 0;
+    text-decoration: none;
+    cursor: pointer;
+    color: #333333;
+    font-weight: 500;
+}
+
+.header-right .cart{
+    background-image: url("asset/cart.svg");
+    background-size: 20px 20px;
+}
+
+.empty-cart-msg{
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: 2;
+    font-weight: 600;
+    box-sizing: border-box;
+    transition: all 0.5s ease-out;
+    background-color: #ffe667;
+}
+
+header .logo .menu{
+    display: none;
+}
+
+header .header-right span{
+    display: none;
+}
+
+@media screen and (max-width: 1149px) {
+    header nav{
+        display: none;
+    }
+
+    header{
+        padding-bottom: 20px;
+    }
+}
+
+.phone-menu{
+    display: none;
+}
+
+
+.backtoup {
+    width: 57px;
+    height: 57px;
+    position: fixed;
+    right: 18px;
+    bottom: 210px;
+    display: none;
+    outline: none;
+    background-color: #00645b;
+    background-image: url("asset/white-up.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 28px 28px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.chat-btn{
+    color: white;
+    background-color: #00b2a2;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+}
+
+.help-btn{
+    position: fixed;
+    bottom: 30px;
+    right: 32px;
+    z-index: 21;
+}
+
+.help-btn button{
+    color: white;
+    border: none;
+    outline: none;
+    font-size: 11px;
+    font-weight: 500;
+    border-radius: 25px;
+    padding: 17px 12px 17px 40px;
+    box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.5);
+    background-color: #00b2a2;
+    background-image: url("asset/help-chat.jpg");
+    background-position: 12px center;
+    background-repeat: no-repeat;
+    background-size: 18px 18px;
+
+}
+
+.help-btn:hover{
+    border-radius: 5px 5px 0 0;
+    background-color: rgba(0, 0, 0, 0.2);
+}
+
+.help-btn button:hover{
+    background-color: #008d7b;
+}
+
+
+footer{
+    width: 100%;
+    color: white;
+    display: flex;
+    padding: 0 20px;
+    justify-content: center;
+    box-sizing: border-box;
+    background-color: #00b2a2;
+}
+
+.footer-cont{
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.pay-app{
+    padding: 40px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.pay, .apps{
+    display: flex;
+    flex-direction: column;
+}
+
+.pay h4{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.pay ul, .apps ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.pay li img{
+    width: 70px;
+    margin-right: 10px;
+}
+
+.apps{
+    padding: 0 0 0 100px;
+}
+
+.apps h4{
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.apps ul{
+    align-items: center;
+}
+
+.apps li img{
+    margin-right: 10px;
+}
+
+.bisleri-bottles{
+    width: 110px;
+}
+
+.lists{
+    padding: 40px 0;
+    display: flex;
+    flex-direction: row;
+}
+
+.lists div{
+    width: 300px;
+}
+
+.lists ul{
+    font-size: 14px;
+    list-style: none;
+    margin-bottom: 50px;
+}
+
+.lists ul li{
+    font-weight: 500 !important;
+    margin-bottom: 25px;
+}
+
+.lists ul li:first-child{
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+
+.lists ul li a{
+    font-weight: 500;
+    color: white;
+    text-decoration: none;
+}
+
+.lists ul .email{
+    margin: 0 !important;
+    line-height: 30px;
+}
+
+.lists ul .phone{
+    margin-bottom: 10px;
+}
+
+.lists ul .time{
+    margin-bottom: 10px;
+}
+
+.lists ul .days{
+    margin-bottom: 25px;
+}
+
+.social-links{
+    display: flex;
+    flex-direction: row;
+}
+
+.social-links li{
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+}
+
+.social-links li a{
+    width: 23px;
+    height: 23px;
+    float: left;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 23px;
+}
+
+.social-links .facebook{
+    background-image: url("./asset/facebook.jpg");
+}
+
+.social-links .twitter{
+    background-image: url("./asset/x.jpg");
+}
+
+.social-links .instagram{
+    background-image: url("./asset/insta.jpg");
+}
+
+.social-links .youtube{
+    background-image: url("./asset/youtube.jpg");
+}
+
+.copyright{
+    display: flex;
+    justify-content: space-between;
+    padding: 50px 0;
+}
+
+.copyright .copyright-text p{
+    font-size: 14px;
+}
+
+.copyright .base-links{
+    max-width: 550px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.copyright .base-links a{
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+
+@media screen and ( max-width: 1070px ){
+    .bisleri-bottles{
+        width: 82px;
+    }
+
+    .android-btn, .appstore-btn{
+        width: 94px;
+    }
+}
+
+.show-480px-770px{
+    display: none;
+}
+
+@media screen and (min-width: 480px) and (max-width: 770px) {
+    .show-480px-770px{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        padding: 30px 30px !important;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        background-color: white;
+    }
+
+    .rotating_image{
+        display: flex;
+        margin-bottom: 20px;
+        justify-content: center;
+    }
+
+    .rotating_image img{
+        width: 150px;
+    }
+
+    .show-480px-770px h3{
+        color: #333333;
+        text-align: center;
+        font: 500 18px 'Work Sans';
+        position: relative;
+    }
+
+    .show-480px-770px p{
+        color: #333333;
+        text-align: center;
+        font: 500 14px 'Work Sans';
+        line-height: 30px;
+        color: #333;
+    }
+
+    .help-btn button{
+        font-size: 8px;
+        background-size: 15px;
+    }    
+}
+
+
+
+
+
+/* greenerPromise Page Start  */
+/* Banner Section Start */
+#banner {
+    position: relative;
+    justify-items: center;
+}
+
+#banner>img {
+    width: 100%;
+    /* height: 605px; */
+}
+
+#banner>div {
+    background-color: #0000002f;
+    position: absolute;
+    justify-items: center;
+    align-content: center;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 99%;
+}
+
+#banner>div>div {
+    display: flex;
+    justify-items: center;
+    width: 75%;
+    height: 60%;
+}
+
+#banner>div>div>div>div>img {
+    margin-bottom: 10px;
+}
+
+#banner>div>div>div {
+    width: 45%;
+}
+
+#banner>div>div>div>div:nth-child(2)>p {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    color: #ffffff;
+    line-height: 22px;
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+#banner>div>div>div>div:last-child>button {
+    background-color: #00645b;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+#banner>div>div>div>div:last-child>button:hover {
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #00645b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid #00645b;
+    transition: all .5s ease-out;
+}
+
+/* Banner Section End */
+
+/* Youtube Section Start */
+#video {
+    position: relative;
+    justify-items: center;
+    width: 100%;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+#video>div {
+    width: 75.5%;
+    height: 500px;
+}
+
+/* Youtube Section End */
+
+/* Image Section Start */
+#contraner {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    padding-bottom: 50px;
+}
+
+#contraner>div:first-child {
+    width: 50%;
+    position: relative;
+}
+
+#contraner>div:first-child>img {
+    width: 99%;
+    border: 1px solid #00645b;
+}
+
+/* #contraner>div:first-child > img:hover{
+    width: 99%;
+    border: 1px solid #00645b;
+    box-shadow: 0px 0px 20px gray;
+} */
+#contraner>div:first-child>div {
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* justify-items: center; */
+    align-content: center;
+    /* width: 99%; */
+    /* height: 100%; */
+    padding-top: 25%;
+    padding-left: 15%;
+}
+
+#contraner>div:first-child>div>div>p {
+    font-family: "Source Serif 4", serif;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 22px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+#contraner>div:first-child>div>div>button {
+    background-color: #00645b;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+#contraner>div:first-child>div>div>button:hover {
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #00645b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid #00645b;
+    transition: all .5s ease-out;
+}
+
+
+
+
+#contraner>div:last-child {
+    width: 50%;
+    position: relative;
+}
+
+#contraner>div:last-child>img {
+    width: 99%;
+    border: 1px solid #00645b;
+}
+
+/* #contraner>div:last-child > img:hover{
+    width: 99%;
+    border: 1px solid #00645b;
+    box-shadow: 0px 0px 20px gray;
+} */
+#contraner>div:last-child>div {
+    top: 0;
+    left: 0;
+    position: absolute;
+    /* justify-items: center; */
+    align-content: center;
+    /* width: 99%; */
+    /* height: 100%; */
+    padding-top: 25%;
+    padding-left: 15%;
+}
+
+#contraner>div:last-child>div>div>p {
+    font-family: "Source Serif 4", serif;
+    font-weight: 800;
+    color: #ffffff;
+    line-height: 22px;
+    font-size: 30px;
+    margin-bottom: 10px;
+    font-style: italic;
+    padding-bottom: 10px;
+}
+
+#contraner>div:last-child>div>div>button {
+    background-color: #00645b;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+#contraner>div:last-child>div>div>button:hover {
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #00645b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid #00645b;
+    transition: all .5s ease-out;
+}
+
+/* Image Section End */
+
+/* greenerPromise Page End  */
+
+
+
+
+/* Nayi Umeed Page Start */
+
+/* Banner Section Start */
+
+#banner-NU {
+    position: relative;
+}
+
+#banner-NU>img {
+    width: 100%;
+    margin-bottom: -5px;
+}
+
+#banner-NU>div {
+    position: absolute;
+    /* justify-items: center; */
+    /* align-content: center; */
+    top: 0px;
+    left: 0px;
+    width: 100%;
+}
+
+#banner-NU>div>p {
+    color: #333333;
+    position: absolute;
+    /* justify-items: center; */
+    /* align-content: center; */
+    top: 0px;
+    left: 0px;
+    /* width: 100%; */
+    /* height: 99%; */
+    padding-left: 160px;
+    padding-top: 20px;
+    font-family: "Work Sans", sans-serif;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+/* Banner Section End */
+
+/* Rainwater Harvesting Section Start */
+#rh {
+    background-image: linear-gradient(#C2E8A9, #A0DEEF);
+    position: relative;
+    justify-items: center;
+    padding-bottom: 150px;
+}
+
+#rh>div {
+    /* background-color: red; */
+    width: 75%;
+    /* text-align: center; */
+}
+
+#rh>div>div:first-child>h1 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#rh>div>div:last-child {
+    /* background-color: red; */
+    position: relative;
+    /* justify-items: center; */
+
+}
+
+#rh>div>div:last-child>img {
+    width: 60%;
+    /* height: 70%; */
+    border-radius: 50px 0px 0px 50px;
+}
+
+#rh>div>div:last-child>div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    /* height: 115%; */
+    top: 0;
+    right: 0;
+    /* justify-items: end; */
+    border-radius: 100px;
+    padding: 100px 70px 100px 70px;
+}
+
+#rh>div>div:last-child>div>p {
+    padding-bottom: 15px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    /* background-color: red; */
+}
+
+#rh>div>div:last-child>div>span>p {
+    margin-top: 60px;
+    align-items: end;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 24px;
+    color: #333333;
+}
+
+#rh>div>div:last-child>div>span>a {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    color: #1D5C49;
+}
+
+/* Rainwater Harvesting Section End */
+
+
+/* Project "Nayi Umeed" Section Start */
+
+#nu {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    padding-left: 10%;
+    padding-right: 10%;
+    position: relative;
+    justify-items: center;
+    align-content: center;
+    width: 80%;
+    /* background-color: red; */
+
+}
+
+#nu>h1 {
+    padding-bottom: 20px;
+    text-align: center;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#nu>p {
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+}
+
+#nu>div>button {
+    background-color: #00645b;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    transition: all .5s ease-out;
+    margin-top: 25px;
+    cursor: pointer;
+}
+
+#nu>div>button:hover {
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #00645b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid #00645b;
+    transition: all .5s ease-out;
+    margin-top: 25px;
+}
+
+/* ---------------------------------- */
+
+
+#hw {
+    position: relative;
+    justify-items: center;
+    padding-bottom: 150px;
+}
+
+#hw>div {
+    width: 75%;
+}
+
+
+#hw>div>div:last-child {
+    position: relative;
+
+}
+
+#hw>div>div:last-child>img {
+    width: 80%;
+    height: 700px;
+    border-radius: 50px 0px 0px 50px;
+}
+
+#hw>div>div:last-child>div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 30%;
+    height: 550px;
+    top: 0;
+    right: 0;
+    /* justify-items: end; */
+    border-radius: 100px;
+    padding: 100px 70px 100px 70px;
+    box-shadow: 10px 10px 30px rgba(128, 128, 128, 0.459);
+}
+
+
+#hw>div>div>div>h1 {
+    padding-bottom: 20px;
+    /* text-align: center; */
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#img {
+    display: flex;
+    /* width: 50px; */
+    gap: 20px;
+}
+
+#img>img {
+    border-radius: 30px;
+}
+
+#arrow {
+    /* display: flex; */
+    /* background-color: green; */
+    height: 50px;
+    width: 100%;
+    justify-items: center;
+    position: relative;
+    justify-items: center;
+}
+
+/* #arrow > div {
+    position: absolute;
+    justify-items: center;
+    align-content: center;
+} */
+#arrow>div:first-child {
+    position: absolute;
+    justify-items: center;
+    align-content: center;
+    top: 0px;
+    left: 0px;
+    padding-left: 75px;
+}
+
+#arrow>div:nth-child(2) {
+    /* background-color: green; */
+    /* justify-items: center;
+    align-content: center;
+    position: absolute; */
+    /* text-align: center; */
+    padding-top: 5px;
+    margin-top: 30px;
+    align-items: end;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+
+}
+
+#arrow>div:last-child {
+    position: absolute;
+    justify-items: center;
+    align-content: center;
+    top: 0px;
+    right: 0px;
+    padding-right: 75px;
+}
+
+#arrow>div>img {
+    height: 30px;
+    width: 30px;
+}
+
+/* Project "Nayi Umeed" Section End */
+/* Nayi Umeed Page End */
+
+
+
+#Statistics-title {
+    position: relative;
+    justify-items: center;
+    text-align: center;
+    /* background-color: red; */
+}
+
+#Statistics-title>div {
+    /* background-color: yellow; */
+    width: 60%;
+
+}
+
+#Statistics-title>div {
+    /* background-color: yellow; */
+    width: 60%;
+
+}
+
+#Statistics-title>div>h1 {
+    text-align: center;
+    /* padding-top: 100px; */
+    padding-bottom: 50px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 52px;
+    color: #333333;
+
+}
+
+#Statistics-body {
+    position: relative;
+    /* justify-items: center; */
+    /* text-align: center; */
+    background-color: #9FDEF0;
+    width: 100%;
+    height: 500px;
+    display: flex;
+}
+
+#Statistics-body>div:first-child>img {
+    border-radius: 0px 50px 50px 0px;
+}
+
+#Statistics-body>div:nth-child(2) {
+    width: 30%;
+    align-content: center;
+    padding-left: 55px;
+    /* background-color: red; */
+}
+
+#Statistics-body>div:nth-child(2)>div:first-child {
+    padding-bottom: 50px;
+}
+
+#Statistics-body>div:nth-child(2)>div {
+    & h6 {
+        /* background-color: red; */
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 29px;
+        font-weight: 700;
+    }
+
+    & p {
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+#Statistics-body>div:nth-child(3) {
+    width: 30%;
+    align-content: center;
+    padding-left: 55px;
+}
+
+#Statistics-body>div:nth-child(3)>div:first-child {
+    padding-bottom: 50px;
+}
+
+#Statistics-body>div:nth-child(3)>div {
+    & h6 {
+        /* background-color: red; */
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 29px;
+        font-weight: 700;
+    }
+
+    & p {
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+
+
+
+
+
+/* bottles-for-change page Start */
+
+/* Used plastic Section Start */
+
+#up {
+    /* background-image: linear-gradient(#C2E8A9, #A0DEEF); */
+    position: relative;
+    justify-items: center;
+    padding-bottom: 150px;
+}
+
+#up>div {
+    /* background-color: red; */
+    width: 75%;
+    /* text-align: center; */
+}
+
+#up>div>div:first-child>h1 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#up>div>div:last-child {
+    /* background-color: red; */
+    position: relative;
+    /* justify-items: center; */
+
+}
+
+#up>div>div:last-child>img {
+    width: 60%;
+    /* height: 500px */
+    border-radius: 50px 0px 0px 50px;
+}
+
+#up>div>div:last-child>div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    height: 70%;
+    top: 0;
+    right: 0;
+    /* justify-items: end; */
+    border-radius: 100px;
+    padding: 100px 70px 100px 70px;
+    box-shadow: 10px 10px 30px rgba(128, 128, 128, 0.459);
+}
+
+#up>div>div:last-child>div>p {
+    padding-bottom: 15px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    /* background-color: red; */
+}
+
+#up>div>div:last-child>div>span>button {
+    margin-top: 10px;
+    background-color: #00645b;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+#up>div>div:last-child>div>span>button:hover {
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #00645b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid #00645b;
+    transition: all .5s ease-out;
+}
+
+/* Used plastic Section End */
+
+
+/* 60% of plastic Section Start  */
+#plastic-waste {
+    /* background-image: linear-gradient(#C2E8A9, #A0DEEF); */
+    position: relative;
+    justify-items: center;
+    padding-bottom: 150px;
+}
+
+#plastic-waste>div {
+    /* background-color: red; */
+    width: 75%;
+    /* text-align: center; */
+}
+
+#plastic-waste>div>div:first-child>h1 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#plastic-waste>div>div:last-child {
+    /* background-color: red; */
+    position: relative;
+    /* justify-items: center; */
+
+}
+
+#plastic-waste>div>div:last-child>img {
+    width: 60%;
+    /* height: 500px */
+    border-radius: 50px 0px 0px 50px;
+}
+
+#plastic-waste>div>div:last-child>div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    height: 85%;
+    top: 0;
+    right: 0;
+    /* justify-items: end; */
+    border-radius: 100px;
+    padding: 100px 70px 100px 70px;
+    box-shadow: 10px 10px 30px rgba(128, 128, 128, 0.459);
+}
+
+#plastic-waste>div>div:last-child>div>p {
+    padding-bottom: 15px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    /* background-color: red; */
+}
+
+#plastic-waste>div>div:last-child>div>span>button {
+    margin-top: 10px;
+    background-color: #00645b;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    margin-top: 25px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+#plastic-waste>div>div:last-child>div>span>button:hover {
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #00645b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid #00645b;
+    transition: all .5s ease-out;
+}
+
+#plastic-waste>div>div:last-child>div>span>p {
+    margin-top: 20px;
+    align-items: end;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    /* line-height: 24px; */
+    color: #333333;
+    margin-bottom: 15px;
+}
+
+#plastic-waste>div>div:last-child>div>span>a {
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 22px;
+    color: #1D5C49;
+    /* background-color: red; */
+    margin-bottom: 50px;
+}
+
+/* 60% of plastic Section End */
+
+
+/* Reasons to Recycle Plastic Section Start */
+#rrp {
+    margin-top: 50px;
+    background-image: linear-gradient(#C2E8A9, #A0DEEF);
+    width: 100%;
+    /* position: relative; */
+    /* justify-items: center; */
+}
+
+#rrp>h1 {
+    text-align: center;
+    padding-top: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#rrp>div {
+    display: flex;
+    justify-items: center;
+    position: relative;
+    width: 100%;
+}
+
+#rrp>div>div:first-child {
+    position: relative;
+    width: 50%;
+}
+
+#rrp>div>div:first-child>img {
+    position: relative;
+    padding-left: 30%;
+    margin-bottom: -5px;
+    /* flex-direction: column; */
+    /* align-items: right; */
+    /* justify-items: flex-end; */
+}
+
+#rrp>div>div:last-child {
+    position: relative;
+    width: 50%;
+    margin-top: 150px;
+}
+
+#rrp>div>div:last-child>div {
+    width: 50%;
+    background-color: white;
+    padding: 20px 25px;
+    margin-left: 35px;
+    margin-bottom: 20px;
+    border-radius: 50px;
+}
+
+#rrp>div>div:last-child>div>p {
+    /* text-align: center; */
+    /* padding-top: 100px; */
+    font-family: "Source Serif 4", serif;
+    font-size: 26px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+/* Reasons to Recycle Plastic Section End */
+
+
+/* What is the Bottles for change program? Section Start */
+
+#wb {
+    position: relative;
+    justify-items: center;
+    padding-bottom: 150px;
+}
+
+#wb>div {
+    /* background-color: red; */
+    width: 75%;
+    /* text-align: center; */
+}
+
+#wb>div>div:first-child>h1 {
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#wb>div>div:last-child {
+    /* background-color: red; */
+    position: relative;
+    /* justify-items: center; */
+
+}
+
+#wb>div>div:last-child>img {
+    width: 60%;
+    /* height: 500px */
+    border-radius: 50px 0px 0px 50px;
+}
+
+#wb>div>div:last-child>div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 45%;
+    height: 85%;
+    top: 0;
+    right: 0;
+    /* justify-items: end; */
+    border-radius: 100px;
+    padding: 100px 70px 100px 70px;
+    box-shadow: 10px 10px 30px rgba(128, 128, 128, 0.459);
+}
+
+#wb>div>div:last-child>div>p {
+    padding-bottom: 15px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    /* background-color: red; */
+}
+
+#wb>div>div:last-child>div>span>button {
+    margin-top: 10px;
+    background-color: #00645b;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #d0d0d0;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid transparent;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+
+#wb>div>div:last-child>div>span>button:hover {
+    background-color: #ffffff;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 700;
+    color: #00645b;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px 30px 10px 30px;
+    border-radius: 23px;
+    border: 1px solid #00645b;
+    transition: all .5s ease-out;
+}
+
+/* What is the Bottles for change program? Section End  */
+
+
+/* Reasons to Recycle Plastic Section Start */
+#wbc {
+    margin-top: 50px;
+    background-image: linear-gradient(#C2E8A9, #A0DEEF);
+    width: 100%;
+    /* margin-bottom: 50px; */
+    /* position: relative; */
+    /* justify-items: center; */
+}
+
+#wbc>h1 {
+    text-align: center;
+    padding-top: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+    margin-bottom: 70px;
+}
+
+.wbc-flex {
+    margin-top: 10px;
+    justify-items: center;
+    /* background-color: red; */
+    width: 100%;
+    /* margin-bottom: 5000px; */
+
+    & div {
+        display: flex;
+        /* align-items: center; */
+        /* justify-items: center; */
+        /* align-content: center; */
+        width: 80%;
+        /* margin-bottom: 100px; */
+        /* background-color: yellow; */
+    }
+
+    & div>h3 {
+        width: 100%;
+        padding-right: 35px;
+        padding-top: 35px;
+        /* background-color: red; */
+        /* align-content: center; */
+        text-align: right;
+        font-family: "Source Serif 4", serif;
+        font-size: 26px;
+        font-weight: 900;
+        font-style: italic;
+        color: #333333;
+    }
+
+    & div>img {
+        /* position: absolute; */
+        /* align-items: center; */
+        /* justify-items: center; */
+        /* align-content: center; */
+        width: 25%;
+        height: 37%;
+        border-radius: 70px;
+        padding: 10px 10px 10px 10px;
+        background-color: white;
+    }
+
+    & div>p {
+        margin-left: -190px;
+        padding: 50px;
+        width: 150%;
+        background-color: rgb(255, 255, 255);
+        /* padding-bottom: 15px; */
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #333333;
+        margin-bottom: 50px;
+        border-radius: 0px 100px 100px 100px;
+        /* margin-bottom: 100px; */
+    }
+}
+
+
+/* Reasons to Recycle Plastic Section End */
+
+
+/* The Bottles for change program Section Start  */
+
+#bcp {
+    position: relative;
+    justify-items: center;
+    padding-bottom: 150px;
+}
+
+#bcp>div {
+    /* background-color: red; */
+    width: 70%;
+    /* text-align: center; */
+}
+
+#bcp>div>div:first-child>h1 {
+    /* width: 110%; */
+    margin-left: -50px;
+    margin-right: -50px;
+    text-align: center;
+    padding-top: 100px;
+    padding-bottom: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+.bpc-sticker {
+    /* background-color: red; */
+    width: 40%;
+    display: flex;
+    background-color: white;
+    border-radius: 50px;
+    padding-left: 10px;
+    /* padding-right: 25px; */
+    padding-top: 10px;
+    padding-bottom: 20px;
+    margin-bottom: 35px;
+    box-shadow: 0px 10px 20px #e9e9e9;
+}
+
+.bpc-sticker>div:first-child {
+    /* background-color: rgb(43, 255, 0); */
+    margin-top: -60px;
+
+    & h3 {
+        font-family: "Source Serif 4", serif;
+        font-size: 75px;
+        font-weight: 900;
+        font-style: italic;
+        color: #9FDEF0;
+        margin-bottom: -120px;
+    }
+
+}
+
+.bpc-sticker>div:last-child>p {
+    font-family: "Source Serif 4", serif;
+    font-size: 32px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#second {
+    margin-top: 100px;
+}
+
+.bcp-box {
+    /* background-color: red; */
+    position: relative;
+    /* width: 90%; */
+    justify-items: center;
+
+}
+
+.bcp-box>img {
+    width: 60%;
+    /* height: 500px */
+    border-radius: 50px 0px 0px 50px;
+}
+
+.bcp-box>div {
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    width: 40%;
+    height: 70%;
+    top: 0;
+    right: 0;
+    margin-top: -50px;
+    /* justify-items: end; */
+    border-radius: 100px;
+    padding: 100px 70px 100px 70px;
+    box-shadow: 0px 10px 20px rgba(189, 189, 189, 0.459);
+}
+
+.bcp-box>div>p {
+    padding-bottom: 15px;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #333333;
+    /* background-color: red; */
+}
+
+/* The Bottles for change program Section Start  */
+
+
+/* Milestones & Initiatives for Change Do? Section Start */
+#mic {
+    margin-top: 50px;
+    background-image: linear-gradient(#C2E8A9, #A0DEEF);
+    width: 100%;
+}
+
+#mic>h1 {
+    text-align: center;
+    padding-top: 100px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    color: #333333;
+}
+
+#mic>div>p {
+    margin-top: 25px;
+    padding-bottom: 100px;
+    padding-left: 12%;
+    padding-right: 12%;
+    font-family: "Work Sans", sans-serif;
+    font-weight: 400;
+    color: #333333;
+    line-height: 24px;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+/* Milestones & Initiatives for Change Do? Section End */
+
+/* Our one small step Section Start */
+
+#oss-title {
+    position: relative;
+    justify-items: center;
+    text-align: center;
+    /* background-color: red; */
+    margin-top: 50px;
+}
+
+#oss-title>div {
+    /* background-color: yellow; */
+    width: 60%;
+
+}
+
+#oss-title>div {
+    /* background-color: yellow; */
+    width: 60%;
+
+}
+
+#oss-title>div>h1 {
+    text-align: center;
+    /* padding-top: 100px; */
+    padding-bottom: 50px;
+    font-family: "Source Serif 4", serif;
+    font-size: 50px;
+    font-weight: 900;
+    font-style: italic;
+    line-height: 52px;
+    color: #333333;
+
+}
+
+#oss-body {
+    position: relative;
+    /* justify-items: center; */
+    /* text-align: center; */
+    background-color: #9FDEF0;
+    width: 100%;
+    height: 750px;
+    display: flex;
+}
+
+#oss-body>div:first-child>img {
+    border-radius: 0px 50px 50px 0px;
+}
+
+#oss-body>div:nth-child(2) {
+    width: 30%;
+    align-content: center;
+    padding-left: 55px;
+    padding-top: 50px;
+
+    /* background-color: red; */
+}
+
+#oss-body>div:nth-child(2)>div {
+    padding-bottom: 50px;
+
+    & img {
+        width: 150px;
+        height: 250px;
+        border: 10px solid white;
+        margin-bottom: 25px;
+    }
+
+    & h6 {
+        /* background-color: red; */
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 29px;
+        font-weight: 700;
+    }
+
+    & p {
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+#oss-body>div:nth-child(3) {
+    width: 30%;
+    align-content: center;
+    padding-left: 55px;
+    padding-bottom: 50px;
+}
+
+#oss-body>div:nth-child(3)>div {
+    padding-bottom: 50px;
+
+    & h6 {
+        /* background-color: red; */
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 29px;
+        font-weight: 700;
+    }
+
+    & p {
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 14px;
+        font-weight: 500;
+    }
+}
+
+#oss-p {
+    margin-left: -150px;
+    margin-top: 80px;
+    padding-right: 80px;
+
+    & p {
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+
+    & button {
+        background-color: #00645b;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 700;
+        color: #d0d0d0;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 10px 30px 10px 30px;
+        border-radius: 23px;
+        border: 1px solid transparent;
+        transition: all .5s ease-out;
+        margin-bottom: 100px;
+        cursor: pointer;
+    }
+
+    & button:hover {
+        background-color: #ffffff;
+        font-family: "Work Sans", sans-serif;
+        font-weight: 700;
+        color: #00645b;
+        font-size: 16px;
+        margin-bottom: 10px;
+        padding: 10px 30px 10px 30px;
+        border-radius: 23px;
+        border: 1px solid #00645b;
+        transition: all .5s ease-out;
+        margin-bottom: 100px;
+    }
+}
+
+/* Our one small step Section end */
+
+/* Form Section Start */
+#form-section {
+    /* background-color: red; */
+    /* position: absolute; */
+
+    padding-bottom: 100px;
+    width: 100%;
+    /* background-color: red; */
+    /* align-items: center; */
+    justify-items: center;
+    /* align-content: center; */
+    padding-top: 100px;
+
+    & div {
+        width: 85%;
+        /* background-color: yellow; */
+        /* align-items: center; */
+        justify-items: center;
+        /* align-content: center; */
+    }
+
+    & div>div:first-child>h1 {
+        text-align: center;
+        padding-bottom: 50px;
+        font-family: "Source Serif 4", serif;
+        font-size: 50px;
+        font-weight: 900;
+        font-style: italic;
+        color: #333333;
+    }
+
+    & div>div:nth-child(2) {
+        width: 50%;
+        display: flex;
+        justify-content: space-between;
+        /* padding-bottom: 5px; */
+        border-bottom: 1px solid rgb(214, 214, 214);
+    }
+
+    & div>div:nth-child(2)>p:first-child {
+        padding-bottom: 5px;
+        /* background-color: yellow; */
+        border-bottom: 3px solid #00645B;
+        color: #00645B;
+        cursor: pointer;
+    }
+    & div>div:nth-child(2)>p:hover {
+        padding-bottom: 5px;
+        /* background-color: yellow; */
+        border-bottom: 3px solid #00645B;
+        color: #00645B;
+        cursor: pointer;
+    }
+
+    & div>div:nth-child(2)>p {
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 20px;
+    }
+
+    & div>div:last-child>div {
+        background-color: rgb(255, 255, 255);
+        margin-top: 35px;
+        /* padding-top: 5px;
+        padding-left: 35px; */
+        padding: 50px;
+        justify-items: left;
+        border-radius: 50px;
+        box-shadow: 10px 10px 25px rgb(206, 206, 206);
+    }
+
+    & div>div:last-child>div>h2 {
+        /* background-color: yellow; */
+        font-family: "Work Sans", sans-serif;
+        color: #4d4c4c;
+        font-size: 21px;
+        font-weight: 600;
+        line-height: 20px;
+        margin-bottom: 25px;
+    }
+
+    & div>div:last-child>div>form {
+        /* background-color: red; */
+        width: 100%;
+        justify-items: center;
+
+        & input::placeholder {
+            font-family: "Work Sans", sans-serif;
+            color: #4d4c4c;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 25px;
+        }
+
+        & input[type=submit] {
+            margin-top: 15px;
+            background-color: #00645b;
+            font-family: "Work Sans", sans-serif;
+            font-weight: 700;
+            color: #d0d0d0;
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding: 10px 30px 10px 30px;
+            border-radius: 23px;
+            border: 1px solid transparent;
+            transition: all .5s ease-out;
+            cursor: pointer;
+        }
+
+        & input[type=submit]:hover {
+            background-color: #ffffff;
+            font-family: "Work Sans", sans-serif;
+            font-weight: 700;
+            color: #333333;
+            font-size: 16px;
+            margin-bottom: 10px;
+            padding: 10px 30px 10px 30px;
+            border-radius: 23px;
+            border: 1px solid #00645b;
+            transition: all .5s ease-out;
+        }
+    }
+}
+
+.field {
+    width: 46%;
+    height: 45px;
+    margin-bottom: 15px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding-left: 15px;
+    /* margin-top: 25px; */
+
+}
+
+#gap {
+    margin-right: 27px;
+}
+
+
+#check1 {
+    font-family: "Work Sans", sans-serif;
+    color: #4d4c4c;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin-bottom: 25px;
+
+    & a {
+        color: #00645b;
+    }
+}
+
+/* Form Section End  */
+
+
+/* Download Bottles for Change app now. Section Start */
+#db {
+    /* background-color: red; */
+    /* position: absolute; */
+
+    padding-bottom: 100px;
+    width: 100%;
+    /* background-color: red; */
+    /* align-items: center; */
+    justify-items: center;
+    /* align-content: center; */
+    padding-top: 100px;
+
+    & div {
+        width: 85%;
+        /* background-color: yellow; */
+        /* align-items: center; */
+        justify-items: center;
+        /* align-content: center; */
+    }
+
+    & div>div:first-child>h1 {
+        text-align: center;
+        /*  */
+        padding-bottom: 50px;
+        font-family: "Source Serif 4", serif;
+        font-size: 50px;
+        font-weight: 900;
+        font-style: italic;
+        color: #333333;
+    }
+
+    & div>div:last-child {
+        display: flex;
+        border-radius: 70px;
+        /* margin-bottom: -115px; */
+        background-color: #E4E4E4;
+
+        & div:first-child>img {
+            /* width: 10%; */
+            height: 250px;
+            border-radius: 70px;
+        }
+
+        & div:nth-child(2) {
+            display: block;
+            /* padding: 35px 50px 25px 50px; */
+            padding-top: 35px;
+            padding-right: 50px;
+            margin-left: 55px;
+            /* align-items: center; */
+        }
+
+        & p {
+            font-family: "Work Sans", sans-serif;
+            color: #4d4c4c;
+            font-size: 15px;
+            font-weight: 500;
+            line-height: 20px;
+            /* margin-bottom: 25px; */
+
+        }
+
+        & div>img {
+            /* margin-top: -15px; */
+            margin-left: -30px;
+        }
+
+    }
+}
+
+/* Download Bottles for Change app now. Section End  */
+
+
+
+/* Our partners on this Mission Section Start */
+#opt {
+    /* background-color: red; */
+    /* position: absolute; */
+
+    padding-bottom: 100px;
+    width: 100%;
+    /* background-color: red; */
+    align-items: center;
+    justify-items: center;
+    
+    /* align-content: center; */
+    padding-top: 100px;
+
+    & div {
+        width: 85%;
+        /* background-color: yellow; */
+        /* align-items: center; */
+        justify-items: center;
+
+        /* background-color: red; */
+        /* align-content: center; */
+    }
+
+    & div:first-child>h1 {
+        text-align: center;
+        padding-bottom: 50px;
+        font-family: "Source Serif 4", serif;
+        font-size: 50px;
+        font-weight: 900;
+        font-style: italic;
+        color: #333333;
+    }
+
+    & div:last-child {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    & div:last-child>div {
+        /* justify-content: space-evenly; */
+        /* background-color: rgb(255, 255, 255); */
+        width: 200px;
+        justify-items: center;
+        align-content: center;
+        border-radius: 35px;
+        box-shadow: 0px 0px 20px #cfcfcf
+    }
+
+    & div:last-child>div>img {
+        justify-items: center;
+        margin-left: 30px;
+    }
+}
+
+
+
+/* Do your part and save the planet! section start  */
+#dps {
+    width: 100%;
+    /* text-align: center; */
+    background-color: #EDF6F4;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    /* margin-left: 15px; */
+    justify-items: center;
+    /* align-content: center; */
+
+    & div:first-child>h3 {
+        text-align: center;
+        padding-bottom: 20px;
+        font-family: "Source Serif 4", serif;
+        font-size: 21px;
+        font-weight: 900;
+        font-style: italic;
+        color: #333333;
+
+    }
+
+    & div:last-child {
+        /* background-color: green; */
+        width: 80%;
+    }
+
+    & div:last-child>p {
+        /* background-color: red; */
+        font-family: "Work Sans", sans-serif;
+        font-weight: 500;
+        color: #333333;
+        line-height: 22px;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+}
+
+/* Do your part and save the planet! section start */
+
+/* Our partners on this Mission Section End  */
+/* Do your part and save the planet! section start */
+
+
+/* bottles-for-change page End */
+
+
+
+@media screen and (max-width: 480px) {
+    .app-ad{
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 5;
+        position: fixed;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        background-color: #c0edfa;
+        justify-content: space-between;
+    }
+
+
+
+
+
+
+
+
+    header{
+        top: 72px;
+        padding: 15px 20px;
+        box-sizing: border-box;
+    }
+
+    header .header-top{
+        display: none;
+    }
+
+    header .header-bottom{
+        padding: 0;
+    }
+
+    header .logo{
+        display: flex;
+        margin: 0;
+    }
+
+    header .logo .menu{
+        width: 40px;
+        display: block;
+        border: none;
+        outline: none;
+        background-image: url("asset/menu.jpg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 35px 35px;
+    }
+
+    header .logo img{
+        width: 80%;
+    }
+
+    header .header-right{
+        margin-right: -5px;
+    }
+
+    header .header-right span{
+        display: block;
+        font-size: 12px;
+        padding: 10px 0;
+    }
+
+    header .header-right .login{
+        display: none;
+    }
+
+    header .header-right button{
+        width: 25px;
+        height: 25px;
+        margin: 5px 0 0 20px;
+        background-size: 18px 18px !important;
+    }
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+    .search-bar-panel{
+        display: none;
+        padding: 50px 0;
+    }
+
+    .search-bar-panel div{
+        width: 100% !important;
+    }
+
+    .search-bar-panel h2{
+        font-size: 23px;
+    }
+
+    .search-bar-panel .close-panel{
+        top: 12px;
+        right: 50px;
+        padding-left: 25px;
+        font-size: 12px;
+    }
+
+    .search-wraper{
+        margin-top: 20px !important;
+        width: 100%;
+        padding: 0 20px;
+        box-sizing: border-box;
+    }
+
+    .search-wraper input{
+        font-size: 12px;
+    }
+
+    .search-wraper button{
+        font-size: 12px;
+    }
+
+    .top-brands{
+        margin: 0px !important;
+    }
+
+    .top-brands p{
+        font-size: 14px;
+    }
+
+    .top-brands div{
+        width: 300px !important;
+        flex-wrap: wrap;
+        margin: auto;
+    }
+
+    .top-brands label{
+        margin-bottom: 15px;
+        font-size: 10px;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .phone-menu{
+        width: 0%;
+        position: fixed;
+        top: 72px;
+        left: -50px;
+        right: 0;
+        bottom: 0;
+        z-index: 20;
+        background-color: white;
+        display: flex;
+        transition: width 0.3s ease;
+    }
+    
+    .phone-menu .list-cont{
+        width: 100%;
+        height: 100%;
+        display: flex;
+        overflow-y: scroll;
+        flex-direction: column;
+    }
+    
+    .log-reg{
+        background: linear-gradient(180deg, #9fdeef 0, #a9e4e2 23%, #aae2df 24%, #b0e5dd 32%, #afe4da 33%, #b4e7d6 42%, #b3e6d3 43%, #b6e7d4 45%, #b6e7d1 50%, #bceacd 58%, #bbeaca 59%, #c0ecc8 68%, #c1ebc5 69%, #c3eec3 74%, #c3ecc0 75%, #c9efbe 83%, #c8eebb 84%, #cef1b7 93%, #ccf0b3 94%, #cff2b2);
+    }
+    
+    .phone-menu .close-menu{
+        width: 40px;
+        height: 40px;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        background-image: url("asset/x.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 35px 35px;
+        background-color: white;
+    }
+    
+    .phone-menu .list-cont li{
+        width: 100%;
+        padding: 0 5px;
+        font-size: 17px;
+        box-sizing: border-box;
+    }
+    
+    .phone-menu .list-cont li a, .phone-menu .list-cont li p{
+        width: 100%;
+        display: block;
+        font-size: 17px;
+        padding: 25px 15px;
+        color: #333333;
+        text-decoration: none;
+        box-sizing: border-box;
+        border-bottom: 1px solid #e5e5e5;
+    }
+    
+    .phone-menu .list-cont li .exp{
+        background-image: url("asset/right.svg");
+        background-position: calc(100% - 10px) center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+    }
+    
+    .phone-menu section a{
+        color: #333333;
+        text-decoration: none;
+        font-size: 17px;
+        display: flex;
+        padding: 15px 60px;
+    }
+    
+    .phone-menu section .phone{
+        background-image: url("asset/phone.jpg");
+        background-position: 20px center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+    }
+    
+    .phone-menu section .email{
+        background-image: url("asset/email.jpg");
+        background-position: 20px center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+    }
+
+    .exp-menu{
+        width: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        display: none;
+        background-color: white;
+    }
+
+    .exp-menu ul li:first-child{
+        padding-left: 30px;
+        box-sizing: border-box;
+        background-image: url("asset/left.svg");
+        background-position:  15px center;
+        background-repeat: no-repeat;
+        background-size: 20px 20px;
+    }
+
+    .close-menu-div{
+        z-index: 10;
+        background-color: white;
+        border-left: 1px solid #e5e5e5;
+    }
+
+.app-ad-wrap{
+        display: flex;
+        align-items: center;
+    }
+
+    .app-ad-wrap i{
+        width: 20px;
+        height: 20px;
+        background-image: url("asset/x.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: 20px 25px;
+    }
+
+    .app-ad-wrap a{
+        margin-left: 5px;
+    }
+
+    .app-ad-wrap h4{
+        color: #333333;
+        margin-right: 10px;
+        margin-left: 10px;
+        font-weight: 400;
+        font-size: 12px;
+    }
+
+    .app-ad .use-app-link a{
+        text-decoration: none;
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 12px;
+        background-color: #1d5c49;
+        border-radius: 10px;
+        color: #fff;
+        white-space: nowrap;
+    }
+
+.pay-app{
+        flex-direction: column;
+    }
+
+    .pay-app h4{
+        font-size: 12px;
+    }
+
+    .pay-app .pay img{
+        width: 50px;
+    }
+
+    .apps{
+        padding: 20px 0 0 0;
+    }
+
+    .apps img{
+        width: 155px;
+    }
+
+    .apps .bisleri-bottles{
+        width: 135px;
+    }
+
+    .lists{
+        padding: 10px 0;
+        flex-direction: column;
+    }
+
+    .lists div{
+        width: 100%;
+    }
+
+    .lists ul li:first-child {
+        font-weight: 700 !important;
+        font-size: 11px;
+        margin-bottom: 15px;
+    }
+
+    .lists ul{
+        margin-bottom: 25px;
+    }
+
+    .lists a, .lists li{
+        font-size: 11px;
+    }
+
+    .copyright{
+        padding: 20px 0;
+        flex-direction: column-reverse;
+    }
+
+    .copyright-text p{
+        width: 100%;
+        text-align: center;
+        margin-top: 15px;
+    }
+
+    .copyright p,  .copyright a{
+        font-size: 11px !important;
+    }
+    
+    .copyright a{
+        text-align: center;
+        font-weight: 500;
+        margin: 0 20px 15px 0;
+    }
+
+
+
+
+    .help-btn button{
+        font-size: 8px;
+        background-size: 15px;
+    }
+}

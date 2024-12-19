@@ -1,0 +1,945 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="icon" href="https://www.bisleri.com/images/favicon.ico" type="image/x-icon">
+    <title>Arko_bottles-for-change</title>
+    <link rel="website icon" type="favicon" href="./images/favicon.ico">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+
+    <!-- Common Code Start (Header) -->
+    <div id="loader">
+        <img src="asset/loader.gif" alt="Loading...">
+    </div>
+
+    <div class="app-ad">
+        <div class="app-ad-wrap">
+            <i onclick="hideAppAd()"></i>
+            <a href="index.html"><img src="https://www.bisleri.com/images/bisleri-icon.webp" alt="Bisleri"></a>
+            <h4>Value Deals on Bisleri app</h4>
+        </div>
+        <span class="use-app-link">
+            <a href="#">Use App</a>
+        </span>
+    </div>
+
+    <div class="empty-cart-msg">
+        <p>There is no product added in the cart</p>
+    </div>
+
+    <header>
+        <div class="header-top">
+            <div class="header-loc">
+                <div class="down">Jaipur</div>
+                <button title="location">GO</button>
+            </div>
+            <ul class="drop-down">
+                <li>Ahmedabad</li>
+                <li>Bangalore</li>
+                <li>Chandigarh</li>
+                <li>Chennai</li>
+                <li>Coimbatore</li>
+                <li>Delhi</li>
+                <li>Faridabad</li>
+                <li>Ghaziabad</li>
+                <li>Goa</li>
+                <li>Gurugram</li>
+                <li>Hyderabad</li>
+                <li>Jaipur</li>
+                <li>Kolkata</li>
+                <li>Ludhiana</li>
+                <li>Mumbai</li>
+                <li>Mysore</li>
+                <li>Navi Mumbai</li>
+                <li>Noida</li>
+                <li>Pondicherry</li>
+                <li>Pune</li>
+                <li>Sahibabad</li>
+                <li>Thane</li>
+                <li>Visakhapatnam</li>
+            </ul>
+            <div class="header-info">
+                <a href="tel:1800 121 1007"><span class="phone"></span><span>1800 121 1007</span></a>
+                <a href="mailto:wecare@bisleri.co.in"><span class="email"></span><span>wecare@bisleri.co.in</span></a>
+            </div>
+        </div>
+        <div class="header-bottom">
+            <div class="header-left">
+                <div class="logo">
+                    <input class="menu" type="button" title="menu" onclick="renderPhoneMenu()">
+                    <a href="index.html">
+                        <img src="https://www.bisleri.com/images/logo.webp" alt="Bisleri">
+                    </a>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a class="active" href="">Home</a></li>
+                        <li class="expend greener-promise"><a href="">Greener Promise</a>
+                        <div class="greener-drop-down">
+                            <a href="https://www.bisleri.com/greenerPromise">Bisleri Greener Promise</a>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.bisleri.com/greener-promise/sustainability-report-2021-22.pdf">Sustainability Report</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.bisleri.com/bottles-for-change">Bottles For Change</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.bisleri.com/rainwater-harvesting">Nayi Umeed</a>
+                                    </li>
+                                    <li>
+                                        <a class="font--size-16 font-family1 font--bold" href="https://www.bisleri.com/pdf/csr-policy.pdf" target="_blank" rel="noopener">CSR Policy</a>
+                                    </li>
+                                    <li>
+                                        <a class="font--size-16 font-family1 font--bold" href="https://www.bisleri.com/csr-annual-return" target="_blank" rel="noopener">CSR Annual Return</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">Shop Products</a></li>
+                        <li class="expend brands">
+                            <a href="">Brands</a>
+                            <div class="brand-dropdown">
+                                <section>
+                                    <h3 class="h3-1">Bisleri</h3>
+                                    <ul>
+                                        <li><a href="https://www.bisleri.com/bisleri-packaged-drinking-water">Bisleri
+                                                Packaged Drinking Water</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h3 class="h3-2">Vedica</h3>
+                                    <ul>
+                                        <li><a href="https://www.bisleri.com/vedica">Vedica Himalayan Spring Water</a>
+                                        </li>
+                                        <li><a href="https://www.bisleri.com/vedica-in-glass">Vedica In Glass</a></li>
+                                        <li><a href="https://www.bisleri.com/vedica-in-glass">Vedica Sparkling Water</a>
+                                        </li>
+                                    </ul>
+                                </section>
+                                <section>
+                                    <h3 class="h3-3">Carbonated Soft Drinks</h3>
+                                    <ul>
+                                        <li><a href="https://www.bisleri.com/bisleri-soda">Bisleri Soda</a></li>
+                                    </ul>
+                                </section>
+                            </div>
+                        </li>
+                        <li class="expend news-room">
+                            <a href="">News Room</a>
+                            <div class="news-room-drop-down">
+                                <span></span>
+                                <ul>
+                                    <li>
+                                        <a href="https://www.bisleri.com/press-release">Press Release</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.bisleri.com/news">News</a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.bisleri.com/blogs">Blogs</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li><a href="">Subscription</a></li>
+                        <li><a href="">UAE</a></li>
+                        <li><a href="">Referral</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="header-right">
+                <span>Jaipur</span>
+                <button class="search" type="button" title="search" onclick="renderSearchBar()"></button>
+                <div class="search-bar-panel">
+                    <div>
+                        <button class="close-panel" onclick="hideSearchBar()">Close</button>
+                        <h2>What are you looking for?</h2>
+                        <div class="search-bar">
+                            <div class="search-wraper">
+                                <input type="text" name="search-bar" placeholder="Type here">
+                                <button type="button">Search</button>
+                            </div>
+                        </div>
+                        <div class="top-brands">
+                            <p>Top brands</p>
+                            <div>
+                                <label>Bisleri Mineral Water</label>
+                                <label>Vedica - Himalayan Spring Water</label>
+                                <label>Hand Purifiers</label>
+                                <label>Merchandise</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="login" type="button" title="login"></button>
+                <ul class="login-drop-down">
+                    <li><a href="login.html">Login</a></li>
+                    <li><a href="signup.html">Register</a></li>
+                </ul>
+                <button class="cart" type="button" title="cart" onclick="emptyCart()"></button>
+            </div>
+        </div>
+    </header>
+
+    <div class="phone-menu">
+        <div class="list-cont">
+            <ul class="log-reg">
+                <li><a class="menu-links" href="login.html">Login</a></li>
+                <li><a href="signup.html">Register</a></li>
+            </ul>
+            <ul>
+                <li>
+                    <p class="exp" onclick="renderSubMenu('exp-menu-1')">Greener Promise</p>
+                    <div class="exp-menu exp-menu-1">
+                        <ul>
+                            <li onclick="hideSubMenu('exp-menu-1')"><p><b>Back</b></p></li>
+                            <li><a href="">Bisleri Greener Promise</a></li>
+                            <li><a href="https://www.bisleri.com/greener-promise/sustainability-report-2021-22.pdf">Sustainability report</a></li>
+                            <li><a href="">Bottles For Change</a></li>
+                            <li><a href="">Nayi Umeed</a></li>
+                            <li><a href="https://www.bisleri.com/pdf/csr-policy.pdf">CSR Policy</a></li>
+                            <li><a href="">CSR Annual Return</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Shop Products</a></li>
+                <li>
+                    <p class="exp" onclick="renderSubMenu('exp-menu-2')">Brands</p>
+                    <div class="exp-menu exp-menu-2">
+                        <ul>
+                            <li onclick="hideSubMenu('exp-menu-2')"><p><b>Back</b></p></li>
+                            <li><a href="">Bisleri Packed Drinking Water</a></li>
+                            <li><a href="">Vedica Himalayan Spring Water</a></li>
+                            <li><a href="">Vedica In Glass</a></li>
+                            <li><a href="">Vedica Spakling Water</a></li>
+                            <li><a href="">Bisleri Soda</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li>
+                    <p class="exp" onclick="renderSubMenu('exp-menu-3')">News Room</p>
+                    <div class="exp-menu exp-menu-3">
+                        <ul>
+                            <li onclick="hideSubMenu('exp-menu-3')"><p><b>Back</b></p></li>
+                            <li><a href="">Press Release</a></li>
+                            <li><a href="">News</a></li>
+                            <li><a href="">Blogs</a></li>
+                        </ul>
+                    </div>
+                </li>
+                <li><a href="">Subscription</a></li>
+                <li><a href="">UAE</a></li>
+            </ul>
+            <section>
+                <a class="phone" href="tel:1800 121 1007">1800 121 1007</a>
+                <a class="email" href="mailto:wecare@bisleri.co.in">wecare@bisleri.co.in</a>
+            </section>
+        </div>
+        <div class="close-menu-div"><button class="close-menu" title="close-menu" onclick="hidePhoneMenu()"></button></div>
+    </div>
+    <!-- Common Code End (Header) -->
+
+    <!-- Banner Section Start -->
+    <section>
+        <div id="banner-NU">
+            <img src="./images/bfc-banner.webp" alt="Bisleri" loading="lazy">
+            <div>
+                <p><a style="color: #00645b;" href="#">Home</a> :
+                    Bottles For Change</p>
+            </div>
+
+        </div>
+    </section>
+    <!-- Banner Section End -->
+
+    <!-- Used plastic Section Start -->
+    <section id="up">
+        <div>
+            <div>
+                <h1>
+                    Used plastic is not a waste.<br>
+                    It’s an opportunity
+                </h1>
+            </div>
+            <div>
+                <img src="./images/battle-for-change.webp" height="470px">
+                <div>
+                    <p>
+                        Plastic is a miraculous material that we invented from petroleum derivatives. Recycled plastic
+                        can be converted into polyester which is used to manufacture Shoes, T-shirts, bags, chairs etc.,
+                        thereby causing less strain on natural resources. The only problem with plastic is its
+                        irresponsible human handling in its disposing. We recognize how well plastic can work for us &
+                        you if utilized properly. Keeping this in mind, we launched ‘Bottles for Change’.
+                    </p>
+
+                    <span>
+                        <button>View Project</button>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Used plastic Section End -->
+
+    <!-- 60% of plastic Section Start -->
+    <section id="plastic-waste">
+        <div>
+            <div>
+                <h1>
+                    60% of plastic waste is recycled in India & we strive to make it 100%.
+                </h1>
+            </div>
+            <div>
+                <img src="./images/percent-plastic.webp">
+                <div>
+                    <p>
+                        India consumes 13 million tons of plastic every year, out of which 60% is recycled. Rest 40% of
+                        plastic majorly contains non-recyclable items like Wrappers, Plastic bags, Milk pouches,
+                        Multilayer chips packets etc. These plastics can be recycled several times but there are hardly
+                        any efforts made because of their lightness & dirtiness. They are dumped in dump yards to lie
+                        there forever and cause problems for the environment.
+                    </p>
+                    <p>
+                        The plastic recycling process refers to the processing of plastic and turning it into a new item
+                        altogether. It includes cleaning the plastic, cutting it into flakes and then melting it at high
+                        temperature for moulding it for desirable use.
+                    </p>
+                    <span>
+                        <p>
+                            <strong>Source: As claimed by the Ministry of Housing & Urban Affairs, India, in their 2019
+                                case study of Plastic waste management.</strong>
+                        </p>
+                    </span>
+                    <span>
+                        <a href="http://164.100.228.143/sbm/home/#/SBM">
+                            http://164.100.228.143/sbm/home/#/SBM
+                        </a>
+                    </span>
+                    <br>
+                    <span>
+                        <button>View Project</button>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- 60% of plastic Section End -->
+
+    <!-- Reasons to Recycle Plastic Section Start  -->
+    <section id="rrp">
+        <h1>
+            Reasons to Recycle Plastic
+        </h1>
+        <div>
+            <div><img src="./images/recycled-container.webp" alt="recycled-container"></div>
+            <div>
+                <div>
+                    <p>Conserves Natural Resources</p>
+                </div>
+                <div>
+                    <p>Saves Landfill Space</p>
+                </div>
+                <div>
+                    <p>Reduces CO2 Emission</p>
+                </div>
+                <div>
+                    <p>Preserves Flora and Fauna</p>
+                </div>
+                <div>
+                    <p>Generate Employment</p>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <!-- Reasons to Recycle Plastic Section End  -->
+
+
+    <!-- What is the Bottles for change program? Section Start  -->
+    <section id="wb">
+        <div>
+            <div>
+                <h1>
+                    What is the<br> Bottles for change program?
+                </h1>
+            </div>
+            <div>
+                <img src="./images/bfc-image.webp" height="500px">
+                <div>
+                    <p>
+                        Bottles for Change Program spreads awareness about using and disposing of plastics responsibly
+                        among the citizens and motivating people to recycle plastic. Through this initiative, we ensure
+                        channelizing all kinds of used clean plastic for recycling. Thus, maintaining a green & clean
+                        environment.
+                    </p>
+                    <p>
+                        Currently we are working in Delhi, NCR, Noida, Gujarat- (Pansar Village), Mumbai, Navi Mumbai,
+                        Thane, Panvel, Chennai. We have partnered with NGOs/ recyclers/ waste management agencies such
+                        as Parisar Sakhi Vikas Sangh, Parisar Bhagini Vikas Sangh, Aakar Mumbai, Sampurn arth, Dalmia
+                        Polypro Pvt. Ltd., IPCA. The collected plastics are converted into fine flakes and use it for
+                        manufacturing non-edible products such as - Cloth fabric, Handbags, Window blinds and other
+                        products.
+                    </p>
+
+                    <span>
+                        <button>Join the initiative</button>
+                    </span>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What is the Bottles for change program? Section End  -->
+
+    <!-- What does Bottles for Change Do? Section Start  -->
+    <section id="wbc">
+        <h1>
+            What does Bottles for Change Do?
+        </h1>
+        <div class="wbc-flex">
+            <div>
+                <div>
+                    <h3>Educating citizens</h3>
+                </div>
+                <div><img src="./images/icon1.jpg" alt="icon"></div>
+                <div>
+                    <p>Educating citizens & bringing awareness about a habitual change in using the correct ways of
+                        plastic disposal and management of used plastic.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wbc-flex">
+            <div>
+                <div>
+                    <h3>Creating a channel and opportunity</h3>
+                </div>
+                <div><img src="./images/icon1.jpg" alt="icon"></div>
+                <div>
+                    <p>We are creating an opportunity for plastic agents & stakeholders such as Housing societies,
+                        Schools, Colleges, Corporates, Hotels and Restaurants to send their used clean plastic directly
+                        for recycling.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wbc-flex">
+            <div>
+                <div>
+                    <h3>Sorting clean plastic</h3>
+                </div>
+                <div><img src="./images/icon1.jpg" alt="icon"></div>
+                <div>
+                    <p>Sorting clean plastic as per their types received from user, at the segregation center and
+                        directly sending it for recycling.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="wbc-flex">
+            <div>
+                <div>
+                    <h3>Providing plastic agents</h3>
+                </div>
+                <div><img src="./images/icon1.jpg" alt="icon"></div>
+                <div>
+                    <p>The welfare of plastic agents by providing them with hygienic working conditions and a
+                        respectable life eventually uplifting their economic status.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What does Bottles for Change Do? Section End  -->
+
+    <!-- The Bottles for change program Section Start   -->
+
+    <section id="bcp">
+        <div>
+            <div>
+                <h1>
+                    The Bottles for change program, helping citizens turn towards plastic recycling.
+                </h1>
+            </div>
+            <!-- 1st part  -->
+            <div class="bpc-sticker">
+                <div>
+                    <h3>1 </h3>
+                </div>
+                <div>
+                    <p>Creating awareness</p>
+                </div>
+            </div>
+            <div class="bcp-box">
+                <img src="./images/program-1.webp" height="500px">
+                <div>
+                    <p>
+                        Through this program, citizens are informed about the importance of source segregation and
+                        cleaning plastic after its use. Various housing societies, corporates, school/colleges, hotels,
+                        restaurants participate in this awareness. Bottles for change program talks about the
+                        significance of not treating plastic as a waste because every bit of plastic is recyclable.
+                        Propagation of this understanding in people would be helpful to establish the fact that plastic
+                        is a valuable resource and not something that belongs in the waste bin.
+                    </p>
+
+
+                </div>
+            </div>
+
+            <!-- 2nd part -->
+
+            <div class="bpc-sticker" id="second" style="margin-left: 100px; width: 82%; margin-bottom: 100px;">
+                <div>
+                    <h3>2 </h3>
+                </div>
+                <div>
+                    <p>How to segregate and dispose of plastic correctly?</p>
+                </div>
+            </div>
+            <div class="bcp-box">
+                <img src="./images/program-2.webp" height="500px">
+                <div>
+                    <p>
+                        After awareness, citizens and housekeeping staff are trained in source segregation and plastic
+                        cleaning after its use. Fortunately, every household in our country has a housekeeping person
+                        who collects the household plastic waste from the doorstep. Our model astutely uses this link to
+                        stop used plastic from going to the dump yards.
+                    </p>
+                </div>
+            </div>
+
+
+            <!-- 3rd part  -->
+
+            <div class="bpc-sticker" id="second" style="width: 47%; margin-bottom: 50px;">
+                <div>
+                    <h3>3 </h3>
+                </div>
+                <div>
+                    <p>Recycling chain takes over</p>
+                </div>
+            </div>
+            <div class="bcp-box">
+                <img src="./images/program-3.webp" height="500px">
+                <div>
+                    <p>
+                        The housekeeping person of our respective stakeholders collects segregated plastic on a
+                        designated day and gives it to the registered Kabadiwala or collection partner under the
+                        ‘Bottles for Change’ program. Kabadiwala pays them by market rates for all plastic. Later,
+                        Kabadiwala sells this collected plastic to the area aggregator and gets paid for the same.
+                    </p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- The Bottles for change program Section End  -->
+
+
+    <!-- Milestones & Initiatives for Change Do? Section Start  -->
+    <section id="mic">
+        <h1>
+            Milestones & Initiatives for Bottles for Change
+        </h1>
+        <div>
+            <p>
+                On 5th June 2018, i.e. World Environment Day, Bisleri launched “BOTTLES FOR CHANGE”, a plastic recycling
+                initiative that focuses on efficient disposal and recycling of plastic. The idea is to create a positive
+                impact on the environment by utilizing the sustainability & versatility of plastic. This launch event
+                was supported and graced by dignitaries like Mr Ramdas Kadam, Environment Minister in the Govt of
+                Maharashtra, Mr Aditya Thackeray, President of Yuva Sena, among others.
+            </p>
+        </div>
+    </section>
+
+    <!-- Milestones & Initiatives Section End  -->
+
+
+
+
+
+
+    <!-- Our one small step Section Start -->
+    <section id="oss-title">
+        <div>
+            <h1>
+                Our one small step that catapulted to the Guinness World Records
+            </h1>
+        </div>
+    </section>
+    <section>
+        <div id="oss-body">
+            <div><img src="./images/guinness-world-record-thumbnail.webp" width="607px" height="500px"></div>
+            <div>
+                <div>
+                    <img src="./images/guinness-world-records-certificate.webp" alt="">
+                    <h6>
+                        25
+                    </h6>
+                    <p>
+                        Municipal Corporations enrolled
+                    </p>
+                </div>
+                <div>
+                    <h6>
+                        5,090
+                    </h6>
+                    <p>
+                        Housing Societies reached
+                    </p>
+                </div>
+                <div>
+                    <h6>
+                        1,397
+                    </h6>
+                    <p>
+                        Schools and Colleges reached
+                    </p>
+                </div>
+                <div>
+                    <h6>
+                        13,33,833
+                    </h6>
+                    <p>
+                        Population reached
+                    </p>
+                </div>
+            </div>
+            <div>
+                <div>
+                    <div id="oss-p">
+                        <p>On October 4th, 2015, Bisleri entered the Guinness World Records and Limca Bookof Records for
+                            collecting highest number of PET bottles for recycling, through a school contact programme
+                            reaching out to over 2 lakh students
+                        </p>
+                        <button>View Project</button>
+                    </div>
+                    <h6>
+                        23
+                    </h6>
+                    <p>
+                        Cities Reached
+                    </p>
+                </div>
+                <div>
+                    <h6>
+                        1,166
+                    </h6>
+                    <p>
+                        Corporates partnered/engaged
+                    </p>
+                </div>
+                <div>
+                    <h6>
+                        961
+                    </h6>
+                    <p>
+                        Hotels and Restaurants reached
+                    </p>
+                </div>
+                <div>
+                    <h6>
+                        13,434
+                    </h6>
+                    <p>
+                        Tons of plastic collected in MT
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Our one small step Section End -->
+
+    <!-- Form Section Start  -->
+
+    <section id="form-section">
+        <div>
+            <div>
+                <h1>
+                    Change starts with you but it doesn’t start until you do. Be a change ambasaador!
+                </h1>
+            </div>
+            <div>
+                <p>Housing Society</p>
+                <p>Corporate & Hotel</p>
+                <p>School & College</p>
+            </div>
+            <div>
+                <div>
+                    <h2>Join the initiative</h2>
+
+                    <form method="post">
+                        <input type="text" placeholder="Name of Housing Society" class="field" id="gap">
+                        <input type="text" placeholder="No of Household in Society" class="field">
+                        <br>
+                        <input type="text" placeholder="Contact Person" class="field" id="gap">
+                        <input type="text" placeholder="How are you Related" class="field">
+                        <br>
+                        <input type="text" placeholder="Address" class="field" id="gap">
+                        <input type="number" placeholder="Pincode" class="field">
+                        <br>
+                        <input type="number" placeholder="Mobile no." class="field" id="gap">
+                        <input type="email" placeholder="Email Id" class="field">
+                        <br>
+                        <input type="checkbox" id="check"> <label id="check1">I agree to <a href="#"> &
+                                Conditions</a></label>
+                        <br>
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Form Section End  -->
+
+
+
+
+
+
+    <!-- Download Bottles for Change app now. Section Start  -->
+    <section id="db">
+        <div>
+            <div>
+                <h1>
+                    Download Bottles for Change app now.
+                </h1>
+            </div>
+            <div>
+                <div>
+                    <img src="./images/bisleri-bottles-change-green1.webp" alt="" width="450px">
+                </div>
+                <div>
+                    <p>
+                        With this app you can locate the nearest plastic agent (kabadiwala) in your area and put
+                        segregated plastic in the right channel. Segregated plastic will be picked by our plastic agent
+                        and then sent for recycling.
+                    </p>
+                    <div>
+                        <img src="./images/google-play.webp" alt="" width="50%">
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Download Bottles for Change app now. Section End  -->
+
+
+    <!-- Our partners on this Mission Section Start  -->
+    <section id="opt">
+        <div>
+            <h1>
+                Our partners on this Mission
+            </h1>
+        </div>
+        <div>
+            <div><img src="./images/sampurna-earth.webp" alt=""></div>
+            <div><img src="./images/dalmia-logo.webp" alt=""></div>
+            <div><img src="./images/ipca3.webp" alt=""></div>
+            <div><img src="./images/akar-mumbai.webp" alt=""></div>
+        </div>
+
+
+    </section>
+
+    <!-- Our partners on this Mission Section End  -->
+
+    <!-- Do your part and save the planet! section start -->
+
+    <section id="dps">
+        <div>
+            <h3>Do your part and save the planet!</h3>
+        </div>
+        <div>
+            <p>
+                We at Bisleri are well aware of how plastic adversely affects the planet. So while that is the truth, we
+                are doing as much as possible to ensure we do not add to it. We, however, need to make a consolidated
+                effort to make a huge impact. So, join us at Bisleri and be a part of our plastic recycling program.
+            </p>
+            <p>
+                We’ve started a ‘Bottles for Change’ initiative, which we would love for you all to be a part of. The
+                idea of this initiative is to ensure that we dispose plastic correctly and increase awareness about
+                waste segregation, plastic disposal, recycling plastic bottles and the required best practices towards
+                maintaining a cleaner environment to live in and share. To optimise our reach, as a part of the bottles
+                for change program and plastic recycling program we conduct plastic recycling awareness drives, waste
+                plastic collection drives in schools, colleges, corporate offices, malls, festive & social gatherings,
+                events, etc.
+            </p>
+            <p>
+                Unless we are the change, the change does not occur. So do not WASTE time and join the bottles for
+                change program and plastic recycling program.
+            </p>
+        </div>
+    </section>
+
+    <!-- Do your part and save the planet! section endt -->
+
+
+
+    <!-- Common Code Start (Footer & Go to Up & Expert Chat) -->
+    <button class="backtoup" type="button" title="top"></button>
+
+    <div class="help-btn">
+        <button type="button" title="chat with expert">Chat with Expert</button>
+    </div>
+
+    <footer>
+        <div class="footer-cont">
+            <div class="pay-app">
+                <div class="pay">
+                    <h4>Secure Payments</h4>
+                    <ul>
+                        <li><img src="asset/visa.jpg" alt=""></li>
+                        <li><img src="asset/mastercard.jpg" alt=""></li>
+                        <li><img src="asset/paytm.jpg" alt=""></li>
+                        <li><img src="asset/maestro.jpg" alt=""></li>
+                        <li><img src="asset/norton.webp" alt=""></li>
+                        <li><img src="asset/mcafee.webp" alt=""></li>
+                    </ul>
+                </div>
+                <div class="apps">
+                    <h4>Our Apps:</h4>
+                    <ul>
+                        <li><img class="bisleri-bottles" src="asset/bisleri-bottles.webp" alt=""></li>
+                        <li><img class="android-btn" src="asset/android-btn.webp" alt=""></li>
+                        <li><img class="appstore-btn" src="asset/appstore-btn.webp" alt=""></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="lists">
+                <div>
+                    <ul>
+                        <li>About Us</li>
+                        <li><a href="https://www.bisleri.com/our-journey">Our Journey</a></li>
+                        <li><a href="https://www.bisleri.com/what-makes-us-stand-apart">What makes us Stand Apart</a></li>
+                        <li><a href="https://www.bisleri.com/90-quality-tests">90 Quality Tests</a></li>
+                        <li><a href="https://www.bisleri.com/promise-of-10">The Promise of 10</a></li>
+                        <li><a href="https://www.bisleri.com/vision-mission-values">Vision, Mission & Values</a></li>
+                        <li><a href="https://www.bisleri.com/team">Leadership Team</a></li>
+                        <li><a href="https://www.bisleri.com/career">Careers</a></li>
+                        <li><a href="https://www.bisleri.com/contact-us">Contact Us</a></li>
+                        <li><a href="https://www.bisleri.com/terms-conditions">Terms & Conditions</a></li>
+                        <li><a href="https://www.bisleri.com/cancel-refund-policy">Cancelation & Refund Policy</a></li>
+                        <li><a href="https://www.bisleri.com/faq">FAQs</a></li>
+                        <li><a href="https://www.bisleri.com/annual-return">Annual Return</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Brands</li>
+                        <li><a href="https://www.bisleri.com/bisleri-packaged-drinking-water">Bisleri</a></li>
+                        <li><a href="https://www.bisleri.com/vedica">Vedica</a></li>
+                        <li><a href="https://www.bisleri.com/limonata">Limonata</a></li>
+                        <li><a href="https://www.bisleri.com/bisleri-soda">Bisleri Soda</a></li>
+                        <li><a href="https://www.bisleri.com/pop">Pop</a></li>
+                    </ul>
+                    <ul>
+                        <li>News Room</li>
+                        <li><a href="https://www.bisleri.com/press-release">Press Release</a></li>
+                        <li><a href="https://www.bisleri.com/news">News</a></li>
+                        <li><a href="https://www.bisleri.com/blogs">Blogs</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://www.bisleri.com/uae"><b>UAE</b></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Become a Distributor</li>
+                        <li><a href="https://www.bisleri.com/distributor">Apply for Bisleri Dealership</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="https://www.bisleri.com/greenerPromise"><b>Greener Promise</b></a></li>
+                    </ul>
+                </div>
+                <div>
+                    <ul>
+                        <li>Contact</li>
+                        <li>Bisleri International Pvt. Ltd.<br><br>
+                            CTS No. 525/1A/1, Western Express <br><br>
+                            Highway,<br><br>
+                            Opp Hindustan Unilever, at Chakala <br><br>
+                            Division,<br><br>
+                            Andheri (East), Mumbai – 400 099</li>
+                    </ul>
+                    <ul>
+                        <li class="email"><b>Email:</b> <a href="mailto:wecare@bisleri.co.in">wecare@bisleri.co.in</a>
+                        </li>
+                        <li class="phone">Phone: <a href="tel:18001211007">1800-121-1007</a></li>
+                        <li class="time">8 AM to 8 PM</li>
+                        <li class="days">Monday to Saturday</li>
+                    </ul>
+                    <ul class="social-links">
+                        <li><a class="facebook" href="https://www.facebook.com/Bisleri/"></a></li>
+                        <li><a class="twitter" href="https://twitter.com/BisleriZone"></a></li>
+                        <li><a class="instagram" href="https://www.instagram.com/bislerizone/"></a></li>
+                        <li><a class="youtube" href="https://www.youtube.com/user/BisleriIndia"></a></li>
+                    </ul>
+                </div>
+            </div>
+            <hr>
+            <div class="copyright">
+                <div class="copyright-text">
+                    <p>© COPYRIGHTS 2020-21</p>
+                </div>
+                <div class="base-links">
+                    <a href="https://payments.billdesk.com/MercOnline/BisleriController" title="Online Payment">Online
+                        Payment</a>
+                    <a href="https://www.bisleri.com/compliance" title="Compliance">Compliance</a>
+                    <a href="https://www.bisleri.com/privacy-policy" title="Privacy Policy">Privacy Policy</a>
+                    <a href="https://www.bisleri.com/cookies-policy" title="Cookie Policy">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="show-480px-770px">
+        <div class="show-480px-770px-cont">
+            <div class="rotating_image">
+                <img src="https://www.bisleri.com/images/rotate.webp" alt="rotate" loading="lazy">
+            </div>
+            <div class="landscape_text">
+                <h3>Please rotate your device</h3>
+                <p>We do not support landscape mode, <br>please use the website in the portrait mode for best experience.</p>
+            </div>
+        </div>
+    </div>
+    <!-- Common Code End (Footer & Go to Up & Expert Chat) -->
+
+    
+
+
+    <script src="common.js"></script>
+</body>
+
+</html>
